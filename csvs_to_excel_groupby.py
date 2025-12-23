@@ -27,14 +27,14 @@ from openpyxl.utils import get_column_letter
 INPUT_KEEP_COLS = [
     "DNS", "Title", "Type", "Port", "Protocol", "CVE ID",
     "Vendor Reference", "CVSS3.1 Base", "Threat", "Impact",
-    "Solution Exploitability", "Results"
+    "Solution", "Results"
 ]
 
 # FINAL_COLS template will have the grouping field name substituted for "GROUP_FIELD"
 FINAL_COLS_TEMPLATE = [
     "GROUP_FIELD", "Title", "Port", "Protocol", "CVE ID", "Vendor Reference",
     "CVSS3.1 Base", "Severity", "Threat", "Impact",
-    "Solution Exploitability", "Results"
+    "Solution", "Results"
 ]
 
 CVSS_RE = re.compile(r"([0-9]+(?:\.[0-9]+)?)")
@@ -378,7 +378,7 @@ def main():
         "Severity": 12,
         "Threat": 20,
         "Impact": 20,
-        "Solution Exploitability": 30,
+        "Solution": 30,
         "Results": 30,
         "Rows": 8,
         "Critical": 8,
